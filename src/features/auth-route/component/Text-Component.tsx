@@ -1,7 +1,7 @@
 import ReactRouterButton from "@/components/component/React-Router-Button";
 import Brand from "@/features/navbar/component/Brand";
 import { Box, Text } from "@chakra-ui/react";
-import { TextComponentProps } from "../types/Text-Component-types";
+import { TextComponentProps } from "../types/text-component-types";
 
 export default function TextComponent(props: TextComponentProps): React.ReactNode {
   const { children, to, setCheckedInput, idName } = props;
