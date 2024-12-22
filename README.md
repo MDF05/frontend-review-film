@@ -1,50 +1,39 @@
-# React + TypeScript + Vite
+# Deployment
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+[https://frontend-review-film.vercel.app/](https://frontend-review-film.vercel.app/)
 
-Currently, two official plugins are available:
+# Tech Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+-   React
+-   typescript
+-   cloudinary
+-   redux
+-   chakra ui
 
-## Expanding the ESLint configuration
+# Simple Guide
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+#### login and register
 
-- Configure the top-level `parserOptions` property like this:
+![](assets/20241223_042113_Screenshot_2024-12-23 040908.png)
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+![](assets/20241223_042113_Screenshot_2024-12-23 040854.png)
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+---
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+#### Add New Review
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+![](assets/20241223_042217_Screenshot_2024-12-23 034730.png)
+
+![](assets/20241223_042217_Screenshot_2024-12-23 034535.png)
+
+---
+
+#### Edit and Delete Review
+
+![](assets/20241223_042456_Screenshot_2024-12-23 042440.png)
+
+---
+
+#### Navigasi
+
+![](assets/20241223_042611_Screenshot_2024-12-23 034955.png)

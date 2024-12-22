@@ -57,7 +57,7 @@ export default function CardDetailReview({ review }: CardReviewProps) {
 
         <VStack mt={"10px"} textAlign={"justify"} _dark={{ color: "black" }}>
           <Text minH={"150px"} color={"white"} _dark={{ color: "black" }}>
-            "{review?.opinion}" Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus praesentium quod, recusandae nam
+            "{review?.opinion}"
           </Text>
         </VStack>
       </VStack>
