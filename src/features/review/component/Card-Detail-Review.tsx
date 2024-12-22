@@ -7,9 +7,8 @@ import { useAppSelector } from "@/stores/store";
 import { showFormattedDate } from "@/utils/format-date";
 import ModalMoreActionsCards from "./Modal-More-Actions-Card";
 import ListStars from "@/features/home/compnent/List-Stars";
-import ModalDetailReview from "./modal-detail-review";
 
-export default function CardReview({ review }: CardReviewProps) {
+export default function CardDetailReview({ review }: CardReviewProps) {
   const state = useAppSelector((state) => state.user);
 
   return (
@@ -21,8 +20,10 @@ export default function CardReview({ review }: CardReviewProps) {
       borderColor={"rgba(0, 0, 0, 0.2)"}
       boxShadow={"basicDark"}
       _dark={{ bg: "white" }}
-      width={"350px"}
-      height={"610px"}
+      width={"100%"}
+      display={"grid"}
+      gap={"20px"}
+      justifyContent={"center"}
     >
       <Flex w={"100%"} flexDirection={"column"} p={0} position={"relative"}>
         {state.id == review.user.id && <ModalMoreActionsCards review={review} />}
@@ -36,32 +37,30 @@ export default function CardReview({ review }: CardReviewProps) {
           </VStack>
         </Flex>
       </Flex>
-      <ModalDetailReview review={review}>
-        <SimpleImageSlider
-          width={340}
-          height={200}
-          images={review.images.map((event) => {
-            return { url: event.imageUrl };
-          })}
-          showBullets={true}
-          showNavs={true}
-        />
-        <VStack gap={"5px"}>
-          <Text fontSize={"2rem"} _dark={{ color: "black" }} height={"40px"} lineClamp={"1"}>
-            "{review.tittle}"
-          </Text>
-          <Text fontSize={"1rem"} _dark={{ color: "black" }} h={"20px"}>
-            release : {review.release}
-          </Text>
-          <ListStars rating={review.rating}></ListStars>
+      <SimpleImageSlider
+        width={340}
+        height={200}
+        images={review.images.map((event) => {
+          return { url: event.imageUrl };
+        })}
+        showBullets={true}
+        showNavs={true}
+      />
+      <VStack gap={"5px"}>
+        <Text fontSize={"2rem"} _dark={{ color: "black" }} height={"40px"} lineClamp={"1"}>
+          "{review.tittle}"
+        </Text>
+        <Text fontSize={"1rem"} _dark={{ color: "black" }} h={"20px"}>
+          release : {review.release}
+        </Text>
+        <ListStars rating={review.rating}></ListStars>
 
-          <VStack mt={"10px"} textAlign={"justify"} _dark={{ color: "black" }}>
-            <Text lineClamp={"6"} height={"150px"} color={"white"} _dark={{ color: "black" }}>
-              "{review?.opinion}"
-            </Text>
-          </VStack>
+        <VStack mt={"10px"} textAlign={"justify"} _dark={{ color: "black" }}>
+          <Text lineClamp={"6"} height={"150px"} color={"white"} _dark={{ color: "black" }}>
+            "{review?.opinion}"
+          </Text>
         </VStack>
-      </ModalDetailReview>
+      </VStack>
     </VStack>
   );
 }
