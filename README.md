@@ -14,9 +14,7 @@
 
 #### login and register
 
-![](assets/20241223_042113_Screenshot_2024-12-23 040908.png)
-
-![](assets/20241223_042113_Screenshot_2024-12-23 040854.png)
+![](assets/20241223_042914_download.png)
 
 ---
 
