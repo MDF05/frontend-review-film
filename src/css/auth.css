@@ -1,0 +1,14 @@
+.checkboxAuth:checked ~ div#formBox {
+    transform: translateX(-100%);
+}
+
+
+
+div#formBox {
+    transition: all 1s ease-in-out;
+}
+
+
+#register,#login {
+    transition: all .5s ease-in-out;
+}
