@@ -29,7 +29,7 @@ export default function CardReview({ review }: CardReviewProps) {
         <Flex alignItems={"center"} gap={"20px"} w={"100%"} pt={state.id !== review.user.id ? "30px" : "0px"}>
           <Avatar w={"50px"} h={"50px"} src={review.user?.image} border={"2px solid grey"}></Avatar>
           <VStack w={"full"} alignItems={"start"} gap={"-40px"}>
-            <Text fontSize={"1.5rem"} lineClamp={"1"} _dark={{ color: "black" }}>
+            <Text fontSize={"1.5rem"} lineClamp={"1"} color={"white"} _dark={{ color: "black" }}>
               {review.user?.name}
             </Text>
             <Text color={"grey"}>{showFormattedDate(review.createdAt)}</Text>
@@ -43,14 +43,14 @@ export default function CardReview({ review }: CardReviewProps) {
           images={review.images.map((event) => {
             return { url: event.imageUrl };
           })}
-          showBullets={true}
-          showNavs={true}
+          showBullets={review.images.length > 1 ? true : false}
+          showNavs={review.images.length > 1 ? true : false}
         />
         <VStack gap={"5px"}>
-          <Text fontSize={"2rem"} _dark={{ color: "black" }} height={"40px"} lineClamp={"1"}>
+          <Text fontSize={"2rem"} color={"white"} _dark={{ color: "black" }} height={"40px"} lineClamp={"1"}>
             "{review.tittle}"
           </Text>
-          <Text fontSize={"1rem"} _dark={{ color: "black" }} h={"20px"}>
+          <Text fontSize={"1rem"} color={"grey"} h={"20px"}>
             release : {review.release}
           </Text>
           <ListStars rating={review.rating}></ListStars>

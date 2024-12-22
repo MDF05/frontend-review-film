@@ -6,7 +6,7 @@ const array: number[] = [1, 2, 3, 4, 5];
 
 export default function ListStars({ setRating, rating }: ListStarsProps) {
   return (
-    <VStack w={"full"} alignItems={"start"}>
+    <VStack w={"full"} alignItems={setRating ? "start" : "center"}>
       <HStack>
         {array.map((number, index) => {
           return (

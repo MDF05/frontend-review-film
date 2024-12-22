@@ -11,7 +11,7 @@ export default function ModalDetailReview(props: ModalDetailReviewProps): React.
       <DialogTrigger asChild>
         <Box>{children}</Box>
       </DialogTrigger>
-      <DialogContent pb={"20px"}>
+      <DialogContent pb={"20px"} bg={"transparent"}>
         <CardDetailReview review={review}></CardDetailReview>
       </DialogContent>
     </DialogRoot>
