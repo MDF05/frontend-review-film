@@ -17,14 +17,14 @@ export default function Auth(): React.ReactNode {
     <VStack>
       <Navbar />
       <ToastContainer autoClose={2000} />
-      <Box display={"flex"} w={"100%"} justifyContent={"center"} boxSizing={"border-box"} p={"60px"}>
+      <Box display={"flex"} w={"100%"} justifyContent={"center"} boxSizing={"border-box"} p={{ base: "60px 10px", md: "30px", lg: "60px" }}>
         <HStack
-          w={"70%"}
+          w={{ base: "100%", md: "70%" }}
           bg={"white"}
           _dark={{ bg: "white", boxShadow: "basicLight" }}
           rounded={"20px"}
           display={"grid"}
-          gridTemplateColumns={"49% 49%"}
+          gridTemplateColumns={{ base: "100%", md: "49% 49%" }}
           border={"2px solid"}
           borderColor={"rgba(0, 0, 0, 0.2)"}
           boxShadow={"basicDark"}
