@@ -15,7 +15,7 @@ export default function RegisterForm(): React.ReactNode {
   const { register, handleSubmit, onSubmit, loading, errors } = useRegister();
 
   return (
-    <Flex as={"form"} p={"20px"} gap={"10px"} flexDirection={"column"} onSubmit={handleSubmit((event) => onSubmit(event))}>
+    <Flex as={"form"} p={"20px"} gap={"10px"} flexDirection={"column"} onSubmit={handleSubmit((event) => onSubmit(event))} _dark={{ color: "black" }}>
       <Field invalid={errors.name && true} errorText={errors.name?.message}>
         <Input placeholder={"Enter Full Name"} type={"text"} bgColor={"white"} {...register("name")} />
       </Field>

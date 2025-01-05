@@ -12,7 +12,7 @@ export default function Profile(): React.ReactNode {
     <VStack h={"100vh"} w={"100vw"}>
       <Box display={"flex"} w={"100%"} justifyContent={"center"} boxSizing={"border-box"} p={"40px"} flexDirection={"column"} alignItems={"center"}>
         <HStack
-          w={"50%"}
+          w={{ base: "100%", md: "70%", lg: "50%" }}
           bg={"white"}
           _dark={{ bg: "white", boxShadow: "basicLight" }}
           rounded={"20px"}

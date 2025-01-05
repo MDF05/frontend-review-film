@@ -12,3 +12,19 @@ div#formBox {
 #register,#login {
     transition: all .5s ease-in-out;
 }
+
+
+@media (max-width : 576px) {
+    div#formBox {
+        transform: translateY(50%);
+    }
+    
+    .checkboxAuth:checked ~ div#formBox {
+        transform: translateY(-50%);
+    }
+
+    div#formBox {
+        background-color: "red";
+    }
+    
+}

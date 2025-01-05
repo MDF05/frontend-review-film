@@ -7,7 +7,7 @@ export default function LoginForm(): React.ReactNode {
   const { handleSubmit, register, onSubmit, loading, errors } = useLogin();
 
   return (
-    <Flex as={"form"} p={"20px"} gap={"10px"} flexDirection={"column"} onSubmit={handleSubmit((event) => onSubmit(event))}>
+    <Flex as={"form"} p={"20px"} gap={"10px"} flexDirection={"column"} onSubmit={handleSubmit((event) => onSubmit(event))} _dark={{ color: "black" }}>
       <Field invalid={errors?.emailORName && true} errorText={errors?.emailORName?.message}>
         <Input placeholder={"Email or Full Name"} type={"text"} bgColor={"white"} {...register("emailORName")} />
       </Field>

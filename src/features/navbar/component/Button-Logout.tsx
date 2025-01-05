@@ -6,7 +6,7 @@ export default function ButtonLogout(): React.ReactNode {
   const { LogOut } = useButtonLogout();
 
   return (
-    <Button bg={"red"} w={"full"} _dark={{ color: "white" }} onClick={LogOut}>
+    <Button bg={"red"} w={"full"} _dark={{ color: "white" }} onClick={LogOut} rounded={"10px"}>
       Logout <MdOutlineLogout />
     </Button>
   );

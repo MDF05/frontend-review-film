@@ -23,6 +23,8 @@ export default function ModalAddReview(): React.ReactNode {
           _dark={{ bg: "black", color: "white", borderColor: "blue.brand" }}
           rounded={"10px"}
           border={"1px solid white"}
+          w={"100%"}
+          h={"100%"}
         >
           Add New
           <Icon fontSize={"2em"}>

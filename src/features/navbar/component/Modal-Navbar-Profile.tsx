@@ -4,9 +4,11 @@ import Profile from "./Profile";
 import useModalNavbar from "../hooks/use-modal-navbar";
 import { DialogDescription } from "./../../../components/ui/dialog";
 import { Avatar } from "@/components/ui/avatar";
-import { VStack } from "@chakra-ui/react";
+import { HStack, VStack } from "@chakra-ui/react";
 import ButtonLogout from "./Button-Logout";
 import ReactRouterButton from "@/components/component/React-Router-Button";
+import { ButtonToggleDarkMode } from "./Toggle-Dark-Mode";
+import ModalAddReview from "@/features/home/compnent/Modal-Add-Review";
 
 export default function ModalNavbarProfile(): React.ReactNode {
   const { user } = useModalNavbar();
@@ -36,7 +38,15 @@ export default function ModalNavbarProfile(): React.ReactNode {
           </VStack>
         </DialogBody>
         <DialogFooter>
-          <ButtonLogout />
+          <VStack w={"100%"}>
+            <ButtonToggleDarkMode display={{ base: "inherit", md: "none" }} bg={"red"}></ButtonToggleDarkMode>
+            <ButtonLogout />
+            {user.email && (
+              <HStack display={{ base: "inherit", md: "none" }} w={"100%"} h={"40px"}>
+                <ModalAddReview />
+              </HStack>
+            )}
+          </VStack>
         </DialogFooter>
       </DialogContent>
     </DialogRoot>

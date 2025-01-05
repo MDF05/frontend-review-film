@@ -38,7 +38,7 @@ export default function CardDetailReview({ review }: CardReviewProps) {
         </Flex>
       </Flex>
       <SimpleImageSlider
-        width={"calc(100% - 20px)"}
+        width={500}
         height={400}
         images={review.images.map((event) => {
           return { url: event.imageUrl };
@@ -47,10 +47,10 @@ export default function CardDetailReview({ review }: CardReviewProps) {
         showNavs={review.images.length > 1 ? true : false}
       />
       <VStack gap={"0px"}>
-        <Text fontSize={"2rem"} color={"white"} _dark={{ color: "black" }} height={"40px"}>
+        <Text fontSize={"2rem"} color={"white"} _dark={{ color: "black" }} textAlign={"center"} lineHeight={"40px"}>
           "{review.tittle}"
         </Text>
-        <Text fontSize={"1rem"} color={"grey"} h={"20px"} mt={"-10px"} mb={"10px"}>
+        <Text fontSize={"1rem"} color={"grey"} h={"20px"} mt={"10px"} mb={"10px"}>
           release : {review.release}
         </Text>
         <ListStars rating={review.rating}></ListStars>

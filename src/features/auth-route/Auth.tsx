@@ -17,9 +17,9 @@ export default function Auth(): React.ReactNode {
     <VStack>
       <Navbar />
       <ToastContainer autoClose={2000} />
-      <Box display={"flex"} w={"100%"} justifyContent={"center"} boxSizing={"border-box"} p={{ base: "60px 10px", md: "30px", lg: "60px" }}>
+      <Box display={"flex"} w={"100%"} justifyContent={"center"} boxSizing={"border-box"} p={{ base: "60px 10px", md: "50px 10px", lg: "60px" }}>
         <HStack
-          w={{ base: "100%", md: "70%" }}
+          w={{ base: "100%", md: "100%", lg: "80%" }}
           bg={"white"}
           _dark={{ bg: "white", boxShadow: "basicLight" }}
           rounded={"20px"}
@@ -41,12 +41,12 @@ export default function Auth(): React.ReactNode {
           </TextComponent>
           <Input type={"checkbox"} id="checkboxFormAuth" className="checkboxAuth" checked={checkedInput} hidden onChange={(event) => setCheckedInput(event.target.checked)}></Input>
           <Box
-            w={"50%"}
+            w={{ base: "100%", md: "50%" }}
             bg={"blue.brand"}
             _dark={{ bg: "black" }}
-            height={"100%"}
+            height={{ base: "50%", md: "100%" }}
             rounded={"20px"}
-            position={"absolute"}
+            position={{ base: "absolute", md: "absolute" }}
             right={"0px"}
             className="formBox"
             id="formBox"

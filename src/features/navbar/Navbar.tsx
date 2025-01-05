@@ -11,8 +11,12 @@ export default function Navbar() {
     <HStack bg={"blue.brand"} _dark={{ bg: "white" }} width={"100%"} justifyContent={"space-between"} px={"10px"} height={"40px"} position={"fixed"} zIndex={"1000"}>
       <Brand color={"white"}></Brand>
       <HStack>
-        <ButtonToggleDarkMode></ButtonToggleDarkMode>
-        {user.email && <ModalAddReview />}
+        <ButtonToggleDarkMode display={{ base: "none", md: "inherit" }}></ButtonToggleDarkMode>
+        {user.email && (
+          <HStack display={{ base: "none", md: "inherit" }}>
+            <ModalAddReview />
+          </HStack>
+        )}
         <ModalNavbarProfile />
       </HStack>
     </HStack>
